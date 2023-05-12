@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLEDOR_PRODUCT</title>
+    <link rel="stylesheet" href="css/끌레도르_product.css"/>
+
+    <script>
+        window.onload = function (){
+            let hd = document.querySelector('header');
+            let hdMobile = hd.getElementsByTagName('nav')[1];
+            let menuMobile = hd.getElementsByTagName('nav')[2];
+            
+            let menuOpen = hd.querySelector('.menu_open');
+            let menuClose = hd.querySelector('.menu_close');
+
+            menuMobile.style.display='none';
+            menuOpen.onclick = function (){
+                if(menuMobile.style.display == 'none') {
+                    menuMobile.style.display = 'block';
+                }
+            }
+
+            menuClose.onclick = function (){
+                if (menuMobile.style.display == 'block') {
+                    menuMobile.style.display = 'none';
+                }
+            }
+
+            let shop = hd.querySelector('#shop');
+            let shopOpen = shop.querySelector('#shop_open');
+            let shopDepth02 = shop.querySelector('.depth02');
+
+            shopDepth02.style.display = 'none';
+            shopOpen.onclick = function (){
+                if (shopDepth02.style.display == 'none'){
+                    shopDepth02.style.display = 'block';
+                    shopOpen.src = "img/icons8-subtract-30.png";
+                }else (shopDepth02.style.display = 'none',
+                shopOpen.src = "img/🦆 icon _add_.png");
+            } // 메뉴 end 
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header_top">
+            <p>"매달 집으로 찾아오는 감동, 프리미엄 아이스크림 <strong>끌레도르</strong>"</p>
+        </div> <!-- .header_top end -->
+        <div class="header_main">
+            <h1>
+                <a href="#">
+                    <img src="img/logo.png" alt="로고"/>
+                </a>
+            </h1>
+            <nav class="pc">
+                <ul class="left_gnb">
+                    <li><a href="https://mentoswon.github.io/cledor_subscribe/">정기구독</a></li>
+                    <li><a href="#">STORY</a></li>
+                    <li><a href="#">SHOP</a></li>
+                </ul> <!-- .left_gnb -->
+
+                <ul class="right_gnb">
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul> <!-- .left_gnb -->
+            </nav> <!-- .pc end -->
+
+            <nav class="mobile">
+                <img class="menu_open" src="img/🦆 icon _menu_.png" alt="메뉴"/>
+                <ul>
+                    <li><img src="img/user.png" alt="유저"></li>
+                    <li><img src="img/🦆 icon _shopping bag_.png" alt="장바구니"></li>
+                </ul>
+            </nav> <!-- .mobile-->
+
+            <nav class="mobile menu">
+                <div class="menu_top">
+                    <img class="menu_close" src="img/🦆 icon _close outline_.png" alt="메뉴 닫기">
+                    <ul>
+                        <li><img src="img/user.png" alt="유저"></li>
+                        <li><img src="img/🦆 icon _shopping bag_.png" alt="장바구니"></li>
+                    </ul>
+                </div> <!-- menu_top end -->
+                <div>
+                    <ul>
+                        <li class="depth01">
+                            <div>
+                                <div>
+                                    <img src="img/🦆 icon _truck_.png" alt=""/>
+                                    <a href="https://mentoswon.github.io/cledor_subscribe/"><h3>정기구독</h3></a>
+                                </div>
+                                <img src="img/icons8-less-than-30.png" alt=""/>
+                            </div>
+                        </li> <!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <div>
+                                <div>
+                                    <img src="img/🦆 icon _document text 1_.png" alt=""/>
+                                    <a href="#"><h3>STORY</h3></a>
+                                </div>
+                                <img src="img/icons8-less-than-30.png" alt=""/>
+                            </div>
+                        </li> <!-- .depth01 end -->
+
+                        <li id="shop" class="depth01">
+                            <div>
+                                <div>
+                                    <img src="img/🦆 icon _plus square_.png" alt=""/>
+                                    <h3>SHOP</h3>
+                                </div>
+                                <img id="shop_open" src="img/🦆 icon _add_.png" alt=""/>
+                            </div>
+                            <ul class="depth02">
+                                <li>바 (7 items)</li>
+                                <li>파인트 (5 items)</li>
+                                <li>컵 (4 items)</li>
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+
+                        <li class="depth01">
+                            <div>
+                                <div>
+                                    <img src="img/🦆 icon _question mark circle_.png" alt=""/>
+                                    <h3>고객센터</h3>
+                                </div>
+                                <img src="img/icons8-less-than-30.png" alt=""/>
+                            </div>
+                        </li> <!-- .depth01 end -->
+                    </ul>
+                </div>
+            </nav> <!-- .menu end -->
+        </div> <!-- .header_main end -->
+    </header>
+
+    <section class="main_visual">
+        <figure>
+            <img src="img/goods_list_banner.jpg" alt="메인비주얼"/>
+        </figure>
+    </section> <!-- .main_visual end -->
+
+    <section class="category">
+        <div class="inner">
+            <h1>PRODUCT</h1>
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <img src="img/logo.png" alt="all"/>
+                    </figure>
+                    <p>ALL</p>
+                </div> <!-- .item end -->
+
+                <div class="item">
+                    <figure>
+                        <img src="img/bar1.png" alt="BAR"/>
+                    </figure>
+                    <p>BAR</p>
+                </div> <!-- .item end -->
+
+                <div class="item">
+                    <figure>
+                        <img src="img/pint1.png" alt="pint"/>
+                    </figure>
+                    <p>PINT</p>
+                </div> <!-- .item end -->
+
+                <div class="item">
+                    <figure>
+                        <img src="img/cup1.png" alt="cup"/>
+                    </figure>
+                    <p>CUP</p>
+                </div> <!-- .item end -->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .category -->
+
+    <section class="content">
+        <div class="inner">
+            <div class="filter">
+                <ul>
+                    <li>최신순</li>
+                    <li>판매순</li>
+                    <li>가격 높은순</li>
+                    <li>가격 낮은순</li>
+                </ul>
+            </div> <!-- .filter end -->
+            
+            <div class="bar">
+                <h4>BAR</h4>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/bar1.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>청정 제주 녹차바</h5>
+                        <p>우유, 대두, 달걀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/bar2.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>마다가스카르 바닐라 아몬드</h5>
+                        <p>우유, 대두, 달걀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/bar3.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 베리믹스바</h5>
+                        <p>우유, 대두, 달걀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/bar4.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 쿠키앤크림바</h5>
+                        <p>우유, 대두, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/bar5.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 쿠키앤초코바</h5>
+                        <p>우유, 대두, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/bar6.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 크림치즈바</h5>
+                        <p>우유, 대두 함유</p>
+                    </div> <!-- .item end -->
+                </div> <!-- .list end -->
+            </div> <!-- .bar end -->
+
+            <div class="pint">
+                <h4>PINT</h4>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/pint1.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 초코</h5>
+                        <p>우유, 달걀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/pint2.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 커피</h5>
+                        <p>우유, 달걀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/pint3.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 레드카펫 치즈케익</h5>
+                        <p>우유, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/pint4.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 더블 쿠키 페스티벌</h5>
+                        <p>우유, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/pint5.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>끌레도르 초코프레첼&브라우니</h5>
+                        <p>우유, 대두, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+
+                </div> <!-- .list end -->
+            </div> <!-- .pint end -->
+
+            <div class="cup">
+                <h4>CUP</h4>
+                <div class="list">
+                    <div class="item">
+                        <figure>
+                            <img src="img/cup1.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>파르페 체리블라썸</h5>
+                        <p>우유 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/cup2.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>파르페 초코</h5>
+                        <p>우유, 대두 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/cup3.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>쇼콜라 치즈케익컵</h5>
+                        <p>우유, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+
+                    <div class="item">
+                        <figure>
+                            <img src="img/cup4.png" alt="1"/>
+                            <ul class="icon">
+                                <li><img src="img/🦆 icon _heart outline_.png" alt="하트"/></li>
+                                <li><img src="img/🦆 icon _plus_.png" alt="플러스"/></li>
+                            </ul> <!-- .icon end -->
+                        </figure>
+                        
+                        <h5>레드카펫 치즈케익컵</h5>
+                        <p>우유, 달걀, 밀 함유</p>
+                    </div> <!-- .item end -->
+                </div> <!-- .list end -->
+            </div> <!-- .cup end -->
+        </div> <!-- .inner -->
+    </section> <!-- .content end -->
+
+    <div class="footer pc">
+        <div class="inner">
+            <ul class="top">
+                <li><a href="#"><strong> 고객센터</strong></a></li>
+                <li><a href="#"><strong>이용약관</strong></a></li>
+                <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+            </ul> <!-- .top end -->
+
+            <div class="list">
+                <ul>
+                    <li><strong>(주)빙그레</strong></li>
+                    <li>주소 : 서울특별시 중구 서소문로 11길 19 </li>
+                    <li>사업자등록번호 : 132-81-00631</li>
+                    <li>통신판매업신고번호 : 다산-0172</li>
+                </ul>
+                <ul>
+                    <li><strong>웨스트윙</strong> </li>
+                    <li>대표 : 최순흠 </li>
+                    <li>주소 : 경상북도 영천시 올밤길 50</li>
+                    <li>사업자 등록번호 : 620-12-74347 [사업자정보확인]</li>
+                    <li>통신판매업신고번호 : 2017-경북영천-0027</li>
+                    <li>이메일 : info@westwing.kr</li>
+                </ul>
+                <ul>
+                    <li><strong>고객센터</strong></li>
+                    <li>TEL.<strong> 070-7760-0171 </strong></li>
+                    <li>운영시간 09:00 - 17:00</li>
+                    <li>점심시간 12:00 - 13:00</li>
+                    <li><span> 토요일/일요일/공휴일 휴무 </span></li>
+                </ul>
+            </div> <!-- .list end -->
+            <p>Copyright (주)빙그레 All rights reserved.</p>
+        </div> <!-- .inner end -->
+    </div> <!-- .footer pc end -->    
+
+    <div class="footer mobile">
+        <div class="inner">
+            <ul class="top">
+                <li><a href="#"><strong> 고객센터</strong></a></li>
+                <li><a href="#"><strong>이용약관</strong></a></li>
+                <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                <li><a href="#"><strong>(주)빙그레</strong></a></li>
+            </ul> <!-- .top end -->
+
+            <p>Copyright (주)빙그레 All rights reserved.</p>
+        </div> <!-- .inner end -->
+    </div> <!-- .footer end -->  
+</body>
+</html>
