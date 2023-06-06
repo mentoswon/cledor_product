@@ -126,6 +126,7 @@ header .header_main nav .right_gnb li {
     width: 100%;
     height: 20vw;
     object-fit: cover;
+    display: block;
 }
 
 /* 🍧🍧 .product_list */
@@ -204,13 +205,17 @@ header .header_main nav .right_gnb li {
 }
 .content .inner>div  .list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
     
 }
 .content .inner>div  .list .item {
     margin-bottom: 4rem;
     width: calc(100% / 4 - 20px);
+    margin-right: calc(4 * 20px / 3);
+}
+.content .inner>div  .list .item:nth-child(4) {
+    margin-right: 0;
 }
 .content .inner>div .list .item figure {
     background-color: rgb(255, 229, 180,0.2);
@@ -255,6 +260,7 @@ header .header_main nav .right_gnb li {
 .content .inner>div .list .item h5 {
     margin-top: 2.5rem;
     font-size: 2rem;
+    line-height: 1.5;
 }
 .content .inner>div .list .item p {
     margin-top: 2rem;
@@ -460,6 +466,14 @@ header .header_main nav .right_gnb li {
     .content .inner>div  .list .item {
         margin-bottom: 4rem;
         width: calc(100% / 3 - 20px);
+        margin-right: calc(3 * 20px / 2);
+    }
+
+    .content .inner>div  .list .item:nth-child(3n) {
+        margin-right: 0;
+    }
+    .content .inner>div  .list .item:nth-child(4) {
+        margin-right: calc(3 * 20px / 2);
     }
     .content .inner>div .list .item h5 {
         font-size: 2.2rem;
@@ -552,6 +566,18 @@ header .header_main nav .right_gnb li {
     .content .inner>div  .list .item {
         margin-bottom: 4rem;
         width: calc(100% / 2 - 20px);
+        margin-right: calc(2 * 20px);
+    }
+
+    .content .inner>div .list .item:nth-child(2n){
+        margin-right: 0;
+    }
+    .content .inner>div .list .item:nth-child(3n) {
+        margin-right: calc(2 * 20px);
+    }
+
+    .content .inner>div .list .item:last-child {
+        margin-right: 0;
     }
     .content .inner>div .list .item h5 {
         font-size: 2.7rem;
@@ -608,8 +634,6 @@ header .header_main nav .right_gnb li {
     }
     .content .inner>div .list .item h5 {
         font-size: 2.4rem;
-        height: 9vw;
-        line-height: 1.5;
     }
     .content .inner>div .list .item p {
         font-size: 2rem;
